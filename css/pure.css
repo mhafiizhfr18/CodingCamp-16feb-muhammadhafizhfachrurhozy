@@ -17,18 +17,18 @@ form {
     border-radius: 20px;
     box-shadow: #00FFD5 0px 0px 20px, #002BFF 0px 0px 40px, #FF00C8 0px 0px 60px;
     animation: formGlow 10s ease infinite;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 @keyframes formGlow {
     0% {
-        box-shadow: #00FFD5 0px 0px 20px, #002BFF 0px 0px 40px, #FF00C8 0px 0px 60px;
+        box-shadow: #00FFD5 0px 0px 10px, #002BFF 0px 0px 30px, #FF00C8 0px 0px 60px;
     }
     50% {
-        box-shadow: #ff0000 0px 0px 20px, #ff7300 0px 0px 40px, #fffb00 0px 0px 60px;
+        box-shadow: #ff0000 0px 0px 10px, #ff7300 0px 0px 30px, #fffb00 0px 0px 60px;
     }
     100% {
-        box-shadow: #00FFD5 0px 0px 20px, #002BFF 0px 0px 40px, #FF00C8 0px 0px 60px;
+        box-shadow: #00FFD5 0px 0px 10px, #002BFF 0px 0px 30px, #FF00C8 0px 0px 60px;
     }
 }
 input {
@@ -45,11 +45,15 @@ input {
 button {
     background-color: #fffdfd;    
 }
-
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
 
 /* button */
 .btn {;
-    padding: 5px 15px;
+    padding: 14px 14px;
     border: none;
     outline: black;
     color: white;
@@ -112,3 +116,4 @@ button {
     color: #000;
     font-weight: bold;
 }
+

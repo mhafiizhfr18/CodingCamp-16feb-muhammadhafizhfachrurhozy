@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List - Hafizh</title>
 
+    <!-- Emoji -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <!-- CSS External -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pure.css">
 
     <!-- CSS CDN -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
@@ -33,19 +35,35 @@
         <!-- Add Button -->
         <button class="btn" onclick="addTodo()" type="button">Add Todo</button>
 
-        <!-- Action Section -->
-        <section class="flex justify-between mt-5"> 
-        <hr>
-        <!-- Filter Options -->
-        <button class="btn" onclick="filterTodos()" type="button">Filter</button>
-        <!-- Clear All Button   -->
-        <button class="btn" onclick="clearTodos()" type="button">Clear All</button>
-        </section>
+        <br>
+        <br>
+        <br>
 
         <!-- Todo List Section -->
         <section>
             <header>
                 <h3 class="list">List of Todos</h3>
+                <!-- Action Section -->
+        <div class="button-group">
+        <!-- Filter Options -->
+            <select class="select" type="btn" id="filterStatus">Filter
+                    <option value="all" type="button">All</option>
+                    <option value="completed" type="button">Completed</option>
+                    <option value="pending" type="button">Pending</option>
+            </select>
+        <!-- Clear All Button   -->
+        <button class="btn" onclick="clearTodos()" type="button" id="clearAll">Clear All</button>
+        </div>
+                <table border="1" cellpadding="22" cellspacing="">
+                    <thead>
+                        <tr>
+                            <th>Todo</th>
+                            <th onclick="renderTasks('all')">Due Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskTableBody">
+                         <!-- Todo items will be dynamically added here -->
             </header>
 
             <ol class="list" id="todo-list">

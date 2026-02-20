@@ -1,3 +1,5 @@
+const { act } = require("react");
+
 function addTodo() {
     const todoInput = document.getElementById('todo-input');
     const todoDate = document.getElementById('todo-date');
