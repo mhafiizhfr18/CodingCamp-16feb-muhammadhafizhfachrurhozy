@@ -1,4 +1,4 @@
-const { act } = require("react");
+const { act, useLayoutEffect } = require("react");
 
 function addTodo() {
     const todoInput = document.getElementById('todo-input');
@@ -10,9 +10,9 @@ function addTodo() {
     }
 
     const todoList = document.getElementById('todo-list');
-    const li = document.createElement('li');
-    li.textContent = `${todoInput.value} (Due: ${todoDate.value})`;
-    todoList.appendChild(li);
+    const listItem = document.createElement('li');
+    listItem.textContent = `${todoInput.value} - Due: ${todoDate.value}`;
+    todoList.appendChild(listItem);
 
     // Clear input fields
     todoInput.value = '';

@@ -11,12 +11,13 @@ html, form {
     flex-direction: column;
     text-align: center;
 }
+
 form {
     background-color: #37334a;
     padding: 25px;
     border-radius: 20px;
     box-shadow: #00FFD5 0px 0px 20px, #002BFF 0px 0px 40px, #FF00C8 0px 0px 60px;
-    animation: formGlow 10s ease infinite;
+    animation: formGlow 20s ease infinite;
     border-radius: 20px;
 }
 
@@ -49,6 +50,7 @@ button {
     display: flex;
     justify-content: space-between;
     margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 /* button */
@@ -117,3 +119,6 @@ button {
     font-weight: bold;
 }
 
+</style>
+</head>
+<body>
