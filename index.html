@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List - Hafizh</title>
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS CDN -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- Header Content -->
-    <header></header>
-    
     <!-- Main Content   -->
-     <main></main>
+     <main>
+        <!-- Form Section -->
+        <form class="pure-form pure-form-stacked">
+            <h1>Todo List</h1>
+            <fieldset> 
+                <!-- Todo Input -->
+                <input class="pure-forms" type="text" id="todo-input" placeholder="Add a todo..." required="">
+                <br>
+                <!-- Date Input -->
+                <input class="pure-forms" type="date" id="todo-date" placeholder="Enter due date" required="">
+                <span class="pure-form-message">This is a required field.</span>
+            </form>
+        <br>
 
-    <!-- Footer Content -->
-    <footer></footer>
+        <!-- Add Button -->
+        <button class="btn" onclick="addTodo()" type="button">Add Todo</button>
 
+        <!-- Action Section -->
+        <section class="flex justify-between mt-5"> 
+        <hr>
+        <!-- Filter Options -->
+        <button class="btn" onclick="filterTodos()" type="button">Filter</button>
+        <!-- Clear All Button   -->
+        <button class="btn" onclick="clearTodos()" type="button">Clear All</button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section>
+            <header>
+                <h3 class="list">List of Todos</h3>
+            </header>
+
+            <ol class="list" id="todo-list">
+                <!-- Todo items will be dynamically added here -->
+            </ol>
+        </section>
+     </main>
+</body>
     <!-- Javascript External -->
     <script src="js/script.js"></script>
-    
-</body>
+
+
+    <!-- Footer Content -->
+
 </html>
